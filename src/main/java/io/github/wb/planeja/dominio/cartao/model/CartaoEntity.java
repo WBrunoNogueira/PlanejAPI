@@ -3,7 +3,6 @@ package io.github.wb.planeja.dominio.cartao.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -17,7 +16,6 @@ public class CartaoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column
-
     private UUID id;
 
     @Column(name = "nome", nullable = false, length = 30)
