@@ -3,7 +3,7 @@ package io.github.wb.planeja.dominio.cartao.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 
@@ -27,11 +27,11 @@ public class CartaoEntity {
     private BandeiraCartao bandeira;
 
     @Column(name = "data_cadastro")
-    private LocalDate dataCadastro;
+    private LocalDateTime dataCadastro;
 
     // para garantir que a data de cadastro seja preenchida automaticamente antes de persistir o objeto no banco de dados
     public void prePersist() {
-        setDataCadastro(LocalDate.now());
+        setDataCadastro(LocalDateTime.now());
     }
 
 }
